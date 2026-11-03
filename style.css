@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #17212b;
+    background: #f4f1ea;
+    line-height: 1.6;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #17212b;
+    color: #f4f1ea;
+    padding: 1.25rem 7vw;
+    gap: 2rem;
+}
+header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+}
+nav a {
+    color: #d8e1e3;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font: 0.95rem Arial, Helvetica, sans-serif;
+    transition: color 0.2s ease;
+}
+nav a:hover, nav a.active {
+    color: #f3b562;
+}
+main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 5rem 7vw;
+}
+main h2 {
+    font-size: clamp(2.6rem, 6vw, 5.5rem);
+    line-height: 0.98;
+    max-width: 720px;
+    margin-bottom: 1.5rem;
+}
+main p {
+    color: #53606a;
+}
+.hero {
+    padding: 3rem 0 5rem;
+    border-bottom: 1px solid #c8c9c1;
+}
+.eyebrow, .card-label {
+    color: #b15d3d;
+    font: 0.78rem Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+.intro {
+    font-size: 1.2rem;
+    max-width: 590px;
+}
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.button, #dateBtn {
+    background-color: #f3b562;
+    color: #17212b;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font: 0.92rem Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.button:hover, #dateBtn:hover {
+    background-color: #e69b45;
+}
+#dateOutput {
+    color: #53606a;
+    font: 0.9rem Arial, Helvetica, sans-serif;
+}
+.feature-grid, .info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #c8c9c1;
+    margin-top: 4rem;
+}
+.feature-card, .info-card {
+    display: block;
+    background: #f4f1ea;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+}
+.feature-card:hover {
+    background: #ebe6da;
+}
+.feature-card h3, .info-card h3 {
+    font-size: 1.6rem;
+    margin: 1.5rem 0 0.5rem;
+}
+.card-link {
+    display: inline-block;
+    color: #b15d3d;
+    font: 0.85rem Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.page-heading {
+    max-width: 700px;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #c8c9c1;
+}
+.page-heading h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+.info-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+.info-card p + p {
+    margin-top: 0.75rem;
+}
+form {
+    display: grid;
+    gap: 0.6rem;
+    max-width: 650px;
+    margin-top: 2.5rem;
+}
+label {
+    font: 0.85rem Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+input, textarea {
+    width: 100%;
+    border: 1px solid #aeb5b2;
+    border-radius: 3px;
+    background: #fbfaf6;
+    color: #17212b;
+    padding: 0.8rem;
+    font: 1rem Georgia, 'Times New Roman', serif;
+    margin-bottom: 0.8rem;
+}
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+form .button {
+    justify-self: start;
+}
+
+@media (max-width: 700px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    nav a {
+        margin: 0 1rem 0 0;
+    }
+    main {
+        padding-top: 3rem;
+    }
+    .feature-grid, .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
